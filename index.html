@@ -26,7 +26,7 @@
             height: 100vh;
         }
 
-        .channel-list {
+        .channel-list, .player-section {
             background: #1a1a2e;
             border-radius: 15px;
             padding: 20px;
@@ -124,13 +124,6 @@
             background: #0056b3;
         }
 
-        .player-section {
-            background: #1a1a2e;
-            border-radius: 15px;
-            padding: 20px;
-            height: calc(100vh - 40px);
-        }
-
         .video-player {
             width: 100%;
             height: calc(100% - 100px);
@@ -138,11 +131,6 @@
             border-radius: 10px;
             margin-bottom: 20px;
             overflow: hidden;
-        }
-
-        .video-player video {
-            width: 100%;
-            height: 100%;
         }
 
         .player-controls {
@@ -183,6 +171,33 @@
 
         ::-webkit-scrollbar-thumb:hover {
             background: #6a6a8a;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .channel-list, .player-section {
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .player-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .control-button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .input-section button {
+                width: 100%;
+            }
         }
     </style>
 </head>
